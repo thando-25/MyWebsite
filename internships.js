@@ -1,3 +1,4 @@
+
 const internships = [
     // === INTERNSHIPS & GRADUATE PROGRAMMES 2026 ===
     { title: "Bidvest International Logistics (BIL): YES Programme 2026", company: "Bidvest International Logistics", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13237" },
