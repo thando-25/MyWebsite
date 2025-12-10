@@ -1,5 +1,3 @@
-
-
 const internships = [
     // === INTERNSHIPS & GRADUATE PROGRAMMES 2026 ===
     { title: "Bidvest International Logistics (BIL): YES Programme 2026", company: "Bidvest International Logistics", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13237" },
@@ -21,9 +19,6 @@ const internships = [
     { title: "Ernst & Young: Graduate Programme 2026", company: "EY", field: "Auditing • Consulting • Tax", link: "https://www.graduates24.com/jobs/viewjob/12702" },
     { title: "Amazon: Internship Opportunities 2026", company: "Amazon", field: "Technology • Operations • HR", link: "https://www.graduates24.com/jobs/viewjob/13253" },
     { title: "Gold Fields: Cadet Internship Programme", company: "Gold Fields", field: "Mining • Engineering • Safety", link: "https://www.graduates24.com/jobs/viewjob/13256" },
-    { title: "Grade 12 / Matric Opportunities", company: "Various Companies", field: "Entry-level • Learnerships • YES", link: "https://www.graduates24.com/grade12_jobs" },
-
-    // 50+ New Internships/Graduate Programmes for 2026
     { title: "Citi South Africa: Graduate Internship Programme 2026", company: "Citi South Africa", field: "Compliance Risk Management • Banking", link: "https://www.graduates24.com/jobs/viewjob/citi-south-africa-graduate-internship-2026" },
     { title: "Department of Employment and Labour: Internship Programme 2026", company: "Department of Employment and Labour", field: "Administration • Labour Law", link: "https://www.graduates24.com/jobs/viewjob/department-employment-labour-internship-2026" },
     { title: "Valterra Platinum Mine: Internship Opportunities 2026", company: "Valterra Platinum Mine", field: "Mining • Engineering", link: "https://www.graduates24.com/jobs/viewjob/valterra-platinum-internship-2026" },
@@ -58,12 +53,10 @@ const internships = [
     { title: "UX/UI Design Internship 2026", company: "Various Agencies", field: "Design • Digital", link: "https://za.indeed.com/q-internship-jobs.html" },
     { title: "BMW Group South Africa: Graduate Programme 2026", company: "BMW Group South Africa", field: "Automotive • Engineering", link: "https://www.opportunitiesforafricans.com/bmw-group-south-africa-graduate-2026" },
     { title: "WACSI: Next Generation Internship 2026", company: "WACSI", field: "Development • Policy", link: "https://www.opportunitiesforafricans.com/wacsi-next-generation-internship-2026" },
-    { title: "Deutsche Welle: International Journalism Traineeship 2027/2028", company: "Deutsche Welle", field: "Journalism • Media", link: "https://www.opportunitiesforafricans.com/deutsche-welle-journalism-traineeship-2027" },
     { title: "Samsung South Africa: Graduate Programme 2026", company: "Samsung South Africa", field: "Technology • Engineering", link: "https://www.opportunitiesforafricans.com/samsung-south-africa-graduate-2026" },
     { title: "Aluko & Oyebode: NYSC Associate Programme 2026", company: "Aluko & Oyebode", field: "Legal • Law", link: "https://www.opportunitiesforafricans.com/aluko-oyebode-nysc-associate-2026" },
     { title: "Telekom: Elevate Graduate Internship 2026", company: "Telekom", field: "Telecom • Technology", link: "https://www.opportunitiesforafricans.com/telekom-elevate-graduate-2026" },
     { title: "Transcorp: Young Engineer Development Programme 2026", company: "Transcorp", field: "Engineering • Power", link: "https://www.opportunitiesforafricans.com/transcorp-young-engineer-2026" },
-    { title: "Coca-Cola: Ascend Leaders in Training 2026", company: "Coca-Cola", field: "Leadership • FMCG", link: "https://www.opportunitiesforafricans.com/coca-cola-ascend-2026" },
 
     // === BURSARIES & SCHOLARSHIPS 2026 ===
     { title: "Free State Office of the Premier: Bursaries 2026", company: "Free State Office of the Premier", field: "Various Fields • Government", link: "https://www.graduates24.com/bursaries/free-state-premier-bursaries-2026" },
@@ -94,7 +87,7 @@ const grid = document.getElementById("internshipsGrid");
 // Heading for Internships
 grid.innerHTML += <h2 style="background:#00d4aa;color:white;padding:20px;border-radius:12px;margin:30px 0 20px;text-align:center;font-size:2rem;">Internships & Graduate Programmes 2026</h2>;
 
-// Render all internships (first ~70)
+// Render first 70 items (internships)
 internships.slice(0, 70).forEach((item, index) => {
     const card = document.createElement("div");
     card.className = "internship-card";
@@ -117,7 +110,7 @@ internships.slice(0, 70).forEach((item, index) => {
 // Heading for Bursaries
 grid.innerHTML += <h2 style="background:#ff6b35;color:white;padding:20px;border-radius:12px;margin:50px 0 20px;text-align:center;font-size:2rem;">Bursaries & Scholarships 2026</h2>;
 
-// Render bursaries (the rest)
+// Render bursaries
 internships.slice(70).forEach((item, index) => {
     const card = document.createElement("div");
     card.className = "internship-card";
