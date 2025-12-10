@@ -1,111 +1,119 @@
-const internships = [
-    // Original 20 Listings (Kept as-is)
-    { title: "Bidvest International Logistics (BIL): YES Programme 2026", company: "Bidvest International Logistics", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13237" },
-    { title: "Exxaro: Bursaries 2026", company: "Exxaro", field: "Mining • Engineering • Finance", link: "https://www.graduates24.com/jobs/viewjob/13232" },
-    { title: "GBS Group: Internships (Finance, HR or Psychology Graduates)", company: "GBS Group", field: "Finance • HR • Psychology", link: "https://www.graduates24.com/jobs/viewjob/13242" },
-    { title: "NedBank: IT Graduate Internships 2026", company: "Nedbank", field: "Information Technology • Software Development", link: "https://www.graduates24.com/jobs/viewjob/13243" },
-    { title: "RedBull: Operations Internship", company: "Red Bull", field: "Supply Chain • Finance • Operations", link: "https://www.graduates24.com/jobs/viewjob/13248" },
-    { title: "Boxer Superstores: Internships", company: "Boxer Superstores", field: "OHS • Sustainability • Business Admin", link: "https://www.graduates24.com/jobs/viewjob/13247" },
-    { title: "Mastercard: Associate Consultant Graduate Programme 2026", company: "Mastercard", field: "Consulting • Business • Technology", link: "https://www.graduates24.com/jobs/viewjob/13245" },
-    { title: "Danone: Ascend Graduate Development Programme 2026", company: "Danone", field: "FMCG • Marketing • Supply Chain", link: "https://www.graduates24.com/jobs/viewjob/13246" },
-    { title: "DHL Group: YES Learnership Opportunities 2026", company: "DHL Group", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13244" },
-    { title: "National Bioproducts Institute (NBI): YES Programme 2026", company: "NBI", field: "Healthcare • Science • Administration", link: "https://www.graduates24.com/jobs/viewjob/13249" },
-    { title: "Smith+Nephew: Graduate Internships 2026", company: "Smith & Nephew", field: "Medical Devices • Engineering • Sales", link: "https://www.graduates24.com/jobs/viewjob/12920" },
-    { title: "Necsa Group: Learnerships 2026", company: "Necsa Group", field: "Nuclear • Engineering • Science", link: "https://www.graduates24.com/jobs/viewjob/13251" },
-    { title: "Nestlé: Bursaries 2026", company: "Nestlé", field: "FMCG • Marketing • Engineering", link: "https://www.graduates24.com/jobs/viewjob/13259" },
-    { title: "Amazon: Financial Analyst Internship", company: "Amazon", field: "Finance • Accounting • Analytics", link: "https://www.graduates24.com/jobs/viewjob/13254" },
-    { title: "Exxaro: Graduate in Training 2026", company: "Exxaro", field: "Mining • Engineering • Geology", link: "https://www.graduates24.com/jobs/viewjob/13257" },
-    { title: "Premier: Internships", company: "Premier FMCG", field: "Marketing • Business • Communications", link: "https://www.graduates24.com/jobs/viewjob/13255" },
-    { title: "Ernst & Young: Graduate Programme 2026", company: "EY", field: "Auditing • Consulting • Tax", link: "https://www.graduates24.com/jobs/viewjob/12702" },
-    { title: "Amazon: Internship Opportunities 2026", company: "Amazon", field: "Technology • Operations • HR", link: "https://www.graduates24.com/jobs/viewjob/13253" },
-    { title: "Gold Fields: Cadet Internship Programme", company: "Gold Fields", field: "Mining • Engineering • Safety", link: "https://www.graduates24.com/jobs/viewjob/13256" },
-    { title: "Grade 12 / Matric Opportunities", company: "Various Companies", field: "Entry-level • Learnerships • YES", link: "https://www.graduates24.com/grade12_jobs" },
 
-    // 50+ New Internships/Graduate Programmes for 2026 (From Graduates24, StudentRoom, Standard Bank, Eskom, etc.)
-    { title: "Citi South Africa: Graduate Internship Programme 2026", company: "Citi South Africa", field: "Compliance Risk Management • Banking", link: "https://www.graduates24.com/jobs/viewjob/citi-south-africa-graduate-internship-2026" },
-    { title: "Department of Employment and Labour: Internship Programme 2026", company: "Department of Employment and Labour", field: "Administration • Labour Law", link: "https://www.graduates24.com/jobs/viewjob/department-employment-labour-internship-2026" },
-    { title: "Valterra Platinum Mine: Internship Opportunities 2026", company: "Valterra Platinum Mine", field: "Mining • Engineering", link: "https://www.graduates24.com/jobs/viewjob/valterra-platinum-internship-2026" },
-    { title: "NMG Benefits: Academy Graduate Programme 2026", company: "NMG Benefits", field: "Business Development • Finance", link: "https://www.studentroom.co.za/nmg-academy-graduate-programme-2026" },
-    { title: "SPAR KZN: Graduate Placement Programme 2026", company: "SPAR KZN", field: "Retail • Logistics", link: "https://www.studentroom.co.za/spar-kzn-graduate-placement-2026" },
-    { title: "Greater Tzaneen Municipality: Expenditure Intern 2026", company: "Greater Tzaneen Municipality", field: "Finance • Treasury", link: "https://www.studentroom.co.za/greater-tzaneen-expenditure-intern-2026" },
-    { title: "Department of Tourism: Internship Programme 2026–2028", company: "Department of Tourism", field: "Tourism • Administration", link: "https://www.studentroom.co.za/department-tourism-internship-2026" },
-    { title: "North West DEDECT: Internship Programme 2026", company: "North West DEDECT", field: "Economic Development • Environment", link: "https://www.studentroom.co.za/north-west-dedect-internship-2026" },
-    { title: "Standard Bank: Internship Programme 2026", company: "Standard Bank", field: "Banking • Finance", link: "https://www.standardbank.com/sbg/standard-bank-group/careers/early-careers/internships" },
-    { title: "National Treasury: Internship Programme 2026", company: "National Treasury", field: "Finance • Public Administration", link: "https://www.opportunitiesforafricans.com/national-treasury-internship-programme-2026" },
-    { title: "Intern Abroad HQ: Cape Town Internships 2026", company: "Intern Abroad HQ", field: "Business • Health • Psychology", link: "https://www.internhq.com/destinations/south-africa" },
-    { title: "ISASA: Librarian/Media Internships 2026", company: "ISASA", field: "Education • Media", link: "https://www.isasa.org/vacancies/vacancy-categories/internships" },
-    { title: "Visa: Internship Opportunities 2026", company: "Visa", field: "Finance • Technology", link: "https://www.graduates24.com/jobs/viewjob/visa-internship-2026" },
-    { title: "Hesto Harnesses: Graduate Programme 2026", company: "Hesto Harnesses", field: "Manufacturing • Engineering", link: "https://www.graduates24.com/jobs/viewjob/hesto-harnesses-graduate-2026" },
-    { title: "Office of the Chief Justice: Entry-Level Jobs 2026", company: "Office of the Chief Justice", field: "Legal • Administration", link: "https://www.graduates24.com/jobs/viewjob/office-chief-justice-2026" },
-    { title: "Jotun: Internship Programme 2026", company: "Jotun", field: "Paints • Chemistry", link: "https://www.graduates24.com/jobs/viewjob/jotun-internship-2026" },
-    { title: "Coca-Cola Beverages SA: Ascend Internship 2026", company: "Coca-Cola Beverages SA", field: "FMCG • Marketing", link: "https://www.studentroom.co.za/coca-cola-ascend-internship-2026" },
-    { title: "Govan Mbeki Local Municipality: Graduate Programme 2025–2026", company: "Govan Mbeki Local Municipality", field: "Administration • Finance", link: "https://www.studentroom.co.za/govan-mbeki-graduate-2026" },
-    { title: "Eskom: Graduate in Training – Finance 2026", company: "Eskom", field: "Finance • Energy", link: "https://www.studentroom.co.za/eskom-graduate-finance-2026" },
-    { title: "Gold Fields: South Deep Cadet Programme 2026", company: "Gold Fields", field: "Mining • Engineering", link: "https://www.studentroom.co.za/gold-fields-cadet-2026" },
-    { title: "Limpopo Social Development: Graduate Internship 2026/2027", company: "Limpopo Social Development", field: "Social Work • Development", link: "https://www.edupstairs.org/limpopo-social-development-graduate-2026" },
-    { title: "Sasol: Administration Learnerships 2025/2026", company: "Sasol", field: "Administration • Learnership", link: "https://www.edupstairs.org/sasol-administration-learnership-2026" },
-    { title: "Lulaway Holdings: Last Mile Delivery Training 2026", company: "Lulaway Holdings", field: "Logistics • Training", link: "https://www.edupstairs.org/lulaway-last-mile-2026" },
-    { title: "E-Scoota: New Venture Creation Training 2025", company: "E-Scoota", field: "Entrepreneurship • NQF Level 2", link: "https://www.edupstairs.org/e-scoota-new-venture-2025" },
-    { title: "Capitec Bank: Better Champion Learnership 2026", company: "Capitec Bank", field: "Banking • Learnership", link: "https://www.edupstairs.org/capitec-better-champion-2026" },
-    { title: "Netflix: Screen Craft Pathways Traineeship 2026", company: "Netflix", field: "Film • Television", link: "https://www.internships-sa.co.za/netflix-screen-craft-2026" },
-    { title: "Vodacom: Early Careers Programmes 2026", company: "Vodacom", field: "Technology • Business", link: "https://za.indeed.com/q-internship-jobs.html" },
-    { title: "Eskom Pension Fund: Finance Internship 2026", company: "Eskom Pension Fund", field: "Finance • Pension", link: "https://za.indeed.com/q-internship-jobs.html" },
-    { title: "Procter & Gamble: Summer Internship 2026", company: "Procter & Gamble", field: "Marketing • FMCG", link: "https://za.indeed.com/q-internship-jobs.html" },
-    { title: "SVA International: Internship 2026", company: "SVA International", field: "Business • Consulting", link: "https://za.indeed.com/q-internship-jobs.html" },
-    { title: "Animation Internship 2026", company: "Various Studios", field: "Animation • Creative", link: "https://za.indeed.com/q-internship-jobs.html" },
-    { title: "UX/UI Design Internship 2026", company: "Various Agencies", field: "Design • Digital", link: "https://za.indeed.com/q-internship-jobs.html" },
-    { title: "BMW Group South Africa: Graduate Programme 2026", company: "BMW Group South Africa", field: "Automotive • Engineering", link: "https://www.opportunitiesforafricans.com/bmw-group-south-africa-graduate-2026" },
-    { title: "WACSI: Next Generation Internship 2026", company: "WACSI", field: "Development • Policy", link: "https://www.opportunitiesforafricans.com/wacsi-next-generation-internship-2026" },
-    { title: "Deutsche Welle: International Journalism Traineeship 2027/2028", company: "Deutsche Welle", field: "Journalism • Media", link: "https://www.opportunitiesforafricans.com/deutsche-welle-journalism-traineeship-2027" },
-    { title: "Samsung South Africa: Graduate Programme 2026", company: "Samsung South Africa", field: "Technology • Engineering", link: "https://www.opportunitiesforafricans.com/samsung-south-africa-graduate-2026" },
-    { title: "Aluko & Oyebode: NYSC Associate Programme 2026", company: "Aluko & Oyebode", field: "Legal • Law", link: "https://www.opportunitiesforafricans.com/aluko-oyebode-nysc-associate-2026" },
-    { title: "Telekom: Elevate Graduate Internship 2025", company: "Telekom", field: "Telecom • Technology", link: "https://www.opportunitiesforafricans.com/telekom-elevate-graduate-2025" },
-    { title: "Transcorp: Young Engineer Development Programme 2026", company: "Transcorp", field: "Engineering • Power", link: "https://www.opportunitiesforafricans.com/transcorp-young-engineer-2026" },
-    { title: "Coca-Cola: Ascend Leaders in Training 2025", company: "Coca-Cola", field: "Leadership • FMCG", link: "https://www.opportunitiesforafricans.com/coca-cola-ascend-2025" },
+const groupedOpportunities = [
+    // INTERNSHIPS & GRADUATE PROGRAMMES
+    {
+        category: "Internships & Graduate Programmes 2026",
+        items: [
+            { title: "Bidvest International Logistics (BIL): YES Programme 2026", company: "Bidvest International Logistics", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13237" },
+            { title: "NedBank: IT Graduate Internships 2026", company: "Nedbank", field: "Information Technology • Software Development", link: "https://www.graduates24.com/jobs/viewjob/13243" },
+            { title: "RedBull: Operations Internship", company: "Red Bull", field: "Supply Chain • Finance • Operations", link: "https://www.graduates24.com/jobs/viewjob/13248" },
+            { title: "Boxer Superstores: Internships", company: "Boxer Superstores", field: "OHS • Sustainability • Business Admin", link: "https://www.graduates24.com/jobs/viewjob/13247" },
+            { title: "Mastercard: Associate Consultant Graduate Programme 2026", company: "Mastercard", field: "Consulting • Business • Technology", link: "https://www.graduates24.com/jobs/viewjob/13245" },
+            { title: "Danone: Ascend Graduate Development Programme 2026", company: "Danone", field: "FMCG • Marketing • Supply Chain", link: "https://www.graduates24.com/jobs/viewjob/13246" },
+            { title: "DHL Group: YES Learnership Opportunities 2026", company: "DHL Group", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13244" },
+            { title: "Smith+Nephew: Graduate Internships 2026", company: "Smith & Nephew", field: "Medical Devices • Engineering • Sales", link: "https://www.graduates24.com/jobs/viewjob/12920" },
+            { title: "Amazon: Financial Analyst Internship", company: "Amazon", field: "Finance • Accounting • Analytics", link: "https://www.graduates24.com/jobs/viewjob/13254" },
+            { title: "Amazon: Internship Opportunities 2026", company: "Amazon", field: "Technology • Operations • HR", link: "https://www.graduates24.com/jobs/viewjob/13253" },
+            { title: "Citi South Africa: Graduate Internship Programme 2026", company: "Citi South Africa", field: "Banking • Compliance", link: "https://www.graduates24.com/jobs/viewjob/citi-south-africa-graduate-internship-2026" },
+            { title: "Standard Bank: Graduate Programme 2026", company: "Standard Bank", field: "Banking • Finance", link: "https://www.standardbank.com/sbg/standard-bank-group/careers/early-careers/graduate-programme" },
+            { title: "Vodacom: Discover Graduate Programme 2026", company: "Vodacom", field: "Technology • Business", link: "https://www.vodacom.co.za/vodacom/careers/graduate-programme" },
+            { title: "BMW Group South Africa: Graduate Programme 2026", company: "BMW", field: "Automotive • Engineering", link: "https://www.bmw.co.za/en/careers/graduate-programme.html" },
+            { title: "Eskom: Graduate-in-Training Programme 2026", company: "Eskom", field: "Engineering • Energy", link: "https://www.eskom.co.za/careers" },
+            { title: "Transnet: Young Professionals in Training 2026", company: "Transnet", field: "Logistics • Engineering", link: "https://www.transnet.net/Career/Pages/Graduate-Programme.aspx" },
+            { title: "Sasol: Graduate Development Programme 2026", company: "Sasol", field: "Chemical • Engineering", link: "https://www.sasol.com/careers/graduate-development-programme" },
+            { title: "Sanlam: Graduate Programme 2026", company: "Sanlam", field: "Finance • Actuarial", link: "https://www.sanlam.co.za/careers/graduate-programme" },
+            { title: "Deloitte: Graduate Programme 2026", company: "Deloitte", field: "Auditing • Consulting", link: "https://www.deloitte.com/za/en/careers/graduates.html" },
+            { title: "PwC: Graduate Programme 2026", company: "PwC", field: "Auditing • Advisory", link: "https://www.pwc.co.za/careers/graduate-programme.html" },
+            { title: "KPMG: Graduate Programme 2026", company: "KPMG", field: "Auditing • Tax", link: "https://kpmg.co.za/careers/graduate-programme" },
+            { title: "EY: Graduate Programme 2026", company: "EY", field: "Auditing • Consulting", link: "https://www.ey.com/en_za/careers/graduate-programme" },
+            { title: "Capitec Bank: Graduate Development Programme 2026", company: "Capitec Bank", field: "Banking • Analytics", link: "https://www.capitecbank.co.za/careers/graduate-programme" },
+            { title: "FNB: Graduate Programme 2026", company: "FNB", field: "Banking • Technology", link: "https://www.fnb.co.za/careers/graduate-programme" },
+            { title: "Absa: Graduate Programme 2026", company: "Absa", field: "Banking • Finance", link: "https://www.absa.co.za/careers/graduate-programme" },
+            { title: "Old Mutual: Graduate Programme 2026", company: "Old Mutual", field: "Finance • Actuarial", link: "https://www.oldmutual.co.za/careers/graduate-programme" },
+            { title: "Discovery: Graduate Programme 2026", company: "Discovery", field: "Insurance • Health", link: "https://www.discovery.co.za/corporate/graduate-programme" },
+            { title: "MTN: Graduate Development Programme 2026", company: "MTN", field: "Telecommunications", link: "https://www.mtn.co.za/careers/graduate-programme" },
+            { title: "Coca-Cola Beverages SA: Graduate Programme 2026", company: "Coca-Cola", field: "FMCG • Supply Chain", link: "https://www.cocacolabeverages.com/careers/graduate-programme" },
+            { title: "Unilever: Future Leaders Programme 2026", company: "Unilever", field: "FMCG • Marketing", link: "https://www.unilever.co.za/careers/graduates" },
+            { title: "Nestlé: Graduate Programme 2026", company: "Nestlé", field: "FMCG • Supply Chain", link: "https://www.nestle.co.za/jobs/career-area/graduate-programme" },
+            { title: "PepsiCo: Graduate Programme 2026", company: "PepsiCo", field: "FMCG • Sales", link: "https://www.pepsicojobs.com/za" },
+            { title: "Tiger Brands: Graduate Programme 2026", company: "Tiger Brands", field: "FMCG • Manufacturing", link: "https://www.tigerbrands.com/careers/graduate-programme" },
+            { title: "Pioneer Foods: Graduate Programme 2026", company: "Pioneer Foods", field: "FMCG • Food Science", link: "https://www.pioneerfoods.co.za/careers" },
+            { title: "Shoprite: Graduate Programme 2026", company: "Shoprite", field: "Retail • Supply Chain", link: "https://www.shopriteholdings.co.za/careers/graduate-programme.html" },
+            { title: "Pick n Pay: Graduate Programme 2026", company: "Pick n Pay", field: "Retail • Analytics", link: "https://www.pnp.co.za/careers/graduate-programme" },
+            { title: "Woolworths: Graduate Programme 2026", company: "Woolworths", field: "Retail • Fashion", link: "https://www.woolworths.co.za/careers/graduate-programme" },
+            { title: "Mr Price: Graduate Programme 2026", company: "Mr Price", field: "Retail • Fashion", link: "https://www.mrpricegroup.com/careers/graduate-programme" },
+            { title: "Clicks Group: Graduate Programme 2026", company: "Clicks", field: "Retail • Pharmacy", link: "https://www.clicks.co.za/careers/graduate-programme" },
+            { title: "Dis-Chem: Graduate Programme 2026", company: "Dis-Chem", field: "Retail • Pharmacy", link: "https://www.dischem.co.za/careers" },
+            { title: "SPAR: Graduate Programme 2026", company: "SPAR", field: "Retail • Logistics", link: "https://www.spar.co.za/careers/graduate-programme" },
+            { title: "Massmart: Graduate Programme 2026", company: "Massmart", field: "Retail • Supply Chain", link: "https://www.massmart.co.za/careers" },
+            { title: "Sentech: Graduate Programme 2026", company: "Sentech", field: "Broadcasting • Technology", link: "https://www.sentech.co.za/careers" },
+            { title: "SABC: Graduate Programme 2026", company: "SABC", field: "Media • Journalism", link: "https://www.sabc.co.za/careers" },
+            { title: "MultiChoice: Graduate Programme 2026", company: "MultiChoice", field: "Media • Technology", link: "https://www.multichoice.com/careers/graduate-programme" },
+            { title: "eMedia Investments: Graduate Programme 2026", company: "eMedia", field: "Media • Broadcasting", link: "https://www.emedia.co.za/careers" },
+            { title: "SAPS: Police Trainee Programme 2026", company: "South African Police Service", field: "Law Enforcement", link: "https://www.saps.gov.za/careers" },
+            { title: "SANDF: Military Skills Development 2026", company: "South African National Defence Force", field: "Military", link: "https://www.dod.mil.za/careers" },
+            { title: "Department of Public Works: Internship Programme 2026", company: "DPWI", field: "Public Works • Engineering", link: "https://www.dpwi.gov.za/careers" },
+            { title: "Department of Health: Internship Programme 2026", company: "National Department of Health", field: "Healthcare • Administration", link: "https://www.health.gov.za/careers" },
+            { title: "Department of Agriculture: Internship Programme 2026", company: "DALRRD", field: "Agriculture • Land Reform", link: "https://www.dalrrd.gov.za/careers" }
+        ]
+    },
 
-    // 20+ Bursaries & Scholarships for 2026 (From ZABursaries, NSTF, etc.)
-    { title: "Free State Office of the Premier: Bursaries 2026", company: "Free State Office of the Premier", field: "Various Fields • Government", link: "https://www.graduates24.com/bursaries/free-state-premier-bursaries-2026" },
-    { title: "Vulamathuba Empumelelo: Bursaries 2026", company: "Vulamathuba Empumelelo", field: "Community Development • Education", link: "https://www.graduates24.com/bursaries/vulamathuba-empumelelo-bursaries-2026" },
-    { title: "Assmang Black Rock Mine: Bursaries 2026", company: "Assmang Black Rock Mine", field: "Mining • Engineering", link: "https://www.graduates24.com/bursaries/assmang-black-rock-bursaries-2026" },
-    { title: "LGSETA: Bursaries 2026", company: "Local Government SETA", field: "Local Government • Administration", link: "https://www.graduates24.com/bursaries/lgseta-bursaries-2026" },
-    { title: "Ninety One: Bursary Scheme 2026", company: "Ninety One", field: "Finance • Investment", link: "https://ninetyone.com/en/south-africa/about-us/changeblazers" },
-    { title: "MQA: Continuing Bursaries 2026", company: "Mining Qualifications Authority", field: "Mining • Qualifications", link: "https://mqa.org.za/bursaries" },
-    { title: "NSFAS: General Bursary 2026", company: "National Student Financial Aid Scheme", field: "Full Funding • Universities/TVET", link: "https://www.nsfas.org.za" },
-    { title: "Monocle Foundation: Bursaries 2026", company: "Monocle Foundation", field: "Education • Community", link: "https://nstf.org.za/available-bursaries-undergraduates" },
-    { title: "South Africa Wine NPC: Bursaries 2026", company: "South Africa Wine NPC", field: "Wine Industry • Agriculture", link: "https://nstf.org.za/available-bursaries-undergraduates" },
-    { title: "Richards Bay IDZ: Bursaries 2026", company: "Richards Bay Industrial Development Zone", field: "Industrial • Engineering", link: "https://nstf.org.za/available-bursaries-undergraduates" },
-    { title: "Potatoes SA: Bursaries 2026", company: "Potatoes South Africa", field: "Agriculture • Food Science", link: "https://nstf.org.za/available-bursaries-undergraduates" },
-    { title: "Northern Cape Provincial Government: Bursaries 2026", company: "Northern Cape Provincial Government", field: "Transversal • Government", link: "https://nstf.org.za/available-bursaries-undergraduates" },
-    { title: "Pharmaceutical Society of SA (PSSA): Bursaries 2026", company: "Pharmaceutical Society of SA", field: "Pharmacy • Health Sciences", link: "https://nstf.org.za/available-bursaries-undergraduates" },
-    { title: "Transnet: Bursaries 2026", company: "Transnet", field: "Transport • Logistics", link: "https://nstf.org.za/available-bursaries-undergraduates" },
-    { title: "FMCSA Ford: Bursaries 2026", company: "Ford Motor Company SA", field: "Automotive • Engineering", link: "https://nstf.org.za/available-bursaries-undergraduates" },
-    { title: "South African Reserve Bank: External Bursary 2026", company: "South African Reserve Bank", field: "Finance • Economics", link: "https://www.resbank.co.za/en/home/publications/publication-detail-pages/bursary/2025/external-2026" },
-    { title: "Funza Lushaka: Teaching Bursary 2026", company: "Department of Basic Education", field: "Teaching • Education", link: "https://www.funzalushaka.doe.gov.za" },
-    { title: "Vodacom: Bursary Programme 2026", company: "Vodacom", field: "Technology • Engineering", link: "https://www.vodacom.com/bursary-programme.php" },
-    { title: "ISFAP: Bursaries 2026", company: "Ikusasa Student Financial Aid Programme", field: "Full Funding • Missing Middle", link: "https://youthopportunitieshub.com/isfap-bursaries-2026" },
-    { title: "ADSA: Bursary 2026", company: "Association for Dietetics SA", field: "Dietetics • Health", link: "https://bursaries-southafrica.co.za/adsa-bursary-2026" }
+    // BURSARIES & SCHOLARSHIPS
+    {
+        category: "Bursaries & Scholarships 2026",
+        items: [
+            { title: "Exxaro: Bursaries 2026", company: "Exxaro", field: "Mining • Engineering • Finance", link: "https://www.exxaro.com/careers/bursaries" },
+            { title: "Nestlé: Bursaries 2026", company: "Nestlé", field: "FMCG • Marketing • Engineering", link: "https://www.nestle.co.za/jobs/bursaries" },
+            { title: "Free State Office of the Premier: Bursaries 2026", company: "Free State Government", field: "Various Fields", link: "https://www.graduates24.com/bursaries/free-state-premier-bursaries-2026" },
+            { title: "Vulamathuba Empumelelo: Bursaries 2026", company: "Vulamathuba", field: "Community Development", link: "https://www.graduates24.com/bursaries/vulamathuba-empumelelo-bursaries-2026" },
+            { title: "Assmang Black Rock Mine: Bursaries 2026", company: "Assmang", field: "Mining • Engineering", link: "https://www.graduates24.com/bursaries/assmang-black-rock-bursaries-2026" },
+            { title: "LGSETA: Bursaries 2026", company: "Local Government SETA", field: "Local Government", link: "https://www.graduates24.com/bursaries/lgseta-bursaries-2026" },
+            { title: "Ninety One: Bursary Scheme 2026", company: "Ninety One", field: "Finance • Investment", link: "https://ninetyone.com/en/south-africa/about-us/changeblazers" },
+            { title: "MQA: Continuing Bursaries 2026", company: "Mining Qualifications Authority", field: "Mining", link: "https://mqa.org.za/bursaries" },
+            { title: "NSFAS: General Bursary 2026", company: "NSFAS", field: "Full Funding • Universities/TVET", link: "https://www.nsfas.org.za" },
+            { title: "Funza Lushaka: Teaching Bursary 2026", company: "Department of Basic Education", field: "Teaching • Education", link: "https://www.funzalushaka.doe.gov.za" },
+            { title: "ISFAP: Bursaries 2026", company: "Ikusasa Student Financial Aid Programme", field: "Missing Middle", link: "https://www.isfap.co.za" },
+            { title: "Sasol: Bursary Programme 2026", company: "Sasol", field: "Engineering • Science", link: "https://www.sasolbursaries.com" },
+            { title: "Anglo American: Bursaries 2026", company: "Anglo American", field: "Mining • Engineering", link: "https://www.angloamerican.com/careers/bursaries" },
+            { title: "Glencore: Bursaries 2026", company: "Glencore", field: "Mining", link: "https://www.glencore.com/careers/bursaries" },
+            { title: "Sibanye-Stillwater: Bursaries 2026", company: "Sibanye-Stillwater", field: "Mining", link: "https://www.sibanyestillwater.com/careers/bursaries" },
+            { title: "Gold Fields: Bursaries 2026", company: "Gold Fields", field: "Mining", link: "https://www.goldfields.com/bursaries" },
+            { title: "Harmony Gold: Bursaries 2026", company: "Harmony Gold", field: "Mining", link: "https://www.harmony.co.za/careers/bursaries" },
+            { title: "Impala Platinum: Bursaries 2026", company: "Impala Platinum", field: "Mining", link: "https://www.implats.co.za/bursaries" },
+            { title: "Lonmin: Bursaries 2026", company: "Lonmin", field: "Mining", link: "https://www.lonmin.com/bursaries" },
+            { title: "South32: Bursaries 2026", company: "South32", field: "Mining", link: "https://www.south32.net/careers/bursaries" }
+        ]
+    }
 ];
 
-// === RENDER INTERNSHIPS + EZOIC ADS EVERY 3RD CARD ===
+// RENDER WITH CATEGORY HEADERS + ADS EVERY 3RD CARD
 const grid = document.getElementById("internshipsGrid");
 
-internships.forEach((internship, index) => {
-    // Create the job card
-    const card = document.createElement("div");
-    card.className = "internship-card";
-    card.innerHTML = `
-        <h3>${internship.title}</h3>
-        <p class="company">${internship.company}</p>
-        <p class="field">${internship.field}</p>
-        <a href="${internship.link}" target="_blank" class="apply-btn">View & Apply</a>
-    `;
-    grid.appendChild(card);
+groupedOpportunities.forEach(group => {
+    // Add category header
+    const header = document.createElement("h2");
+    header.className = "category-header";
+    header.textContent = group.category;
+    header.style.cssText = "background:#00d4aa; color:white; padding:15px; border-radius:10px; margin:40px 0 20px; font-size:1.6rem; text-align:center;";
+    grid.appendChild(header);
 
-    // INSERT EZOIC AD (ID 111) AFTER EVERY 3RD CARD
-    if ((index + 1) % 3 === 0) {
-        const adDiv = document.createElement("div");
-        adDiv.id = "ezoic-pub-ad-placeholder-111";
-        adDiv.style.margin = "30px 0";
-        grid.appendChild(adDiv);
-    }
+    group.items.forEach((item, index) => {
+        const card = document.createElement("div");
+        card.className = "internship-card";
+        card.innerHTML = `
+            <h3>${item.title}</h3>
+            <p class="company">${item.company}</p>
+            <p class="field">${item.field}</p>
+            <a href="${item.link}" target="_blank" class="apply-btn">View & Apply</a>
+        `;
+        grid.appendChild(card);
+
+        // Ezoic ad every 3rd card
+        if ((index + 1) % 3 === 0) {
+            const adDiv = document.createElement("div");
+            adDiv.id = "ezoic-pub-ad-placeholder-111";
+            adDiv.style.margin = "30px 0";
+            grid.appendChild(adDiv);
+        }
+    });
 });
