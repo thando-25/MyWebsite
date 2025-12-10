@@ -81,51 +81,41 @@ const internships = [
     { title: "ADSA: Bursary 2026", company: "Association for Dietetics SA", field: "Dietetics • Health", link: "https://bursaries-southafrica.co.za/adsa-bursary-2026" }
 ];
 
-// === RENDER WITH CLEAN HEADINGS + ADS EVERY 3RD CARD ===
+// === RENDER WITH CLEAN HEADINGS – NO EZOIC ADS AT ALL ===
 const grid = document.getElementById("internshipsGrid");
 
-// Heading for Internships
-grid.innerHTML += <h2 style="background:#00d4aa;color:white;padding:20px;border-radius:12px;margin:30px 0 20px;text-align:center;font-size:2rem;">Internships & Graduate Programmes 2026</h2>;
+// Internships Heading
+grid.innerHTML += `<h2 style="background:#00d4aa;color:white;padding:20px;border-radius:12px;margin:40px 0 25px;text-align:center;font-size:2.2rem;">
+    Internships & Graduate Programmes 2026
+</h2>`;
 
-// Render first 70 items (internships)
-internships.slice(0, 70).forEach((item, index) => {
+// Render Internships (first 70 items)
+internships.slice(0, 70).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
     card.innerHTML = `
         <h3>${item.title}</h3>
-        <p class="company">${item.company}</p>
-        <p class="field">${item.field}</p>
+        <p class="company"><strong>Company:</strong> ${item.company}</p>
+        <p class="field"><strong>Field:</strong> ${item.field}</p>
         <a href="${item.link}" target="_blank" class="apply-btn">View & Apply</a>
     `;
     grid.appendChild(card);
-
-    if ((index + 1) % 3 === 0) {
-        const ad = document.createElement("div");
-        ad.id = "ezoic-pub-ad-placeholder-111";
-        ad.style.margin = "30px 0";
-        grid.appendChild(ad);
-    }
 });
 
-// Heading for Bursaries
-grid.innerHTML += <h2 style="background:#ff6b35;color:white;padding:20px;border-radius:12px;margin:50px 0 20px;text-align:center;font-size:2rem;">Bursaries & Scholarships 2026</h2>;
+// Bursaries Heading
+grid.innerHTML += `<h2 style="background:#ff6b35;color:white;padding:20px;border-radius:12px;margin:60px 0 25px;text-align:center;font-size:2.2rem;">
+    Bursaries & Scholarships 2026
+</h2>`;
 
-// Render bursaries
-internships.slice(70).forEach((item, index) => {
+// Render Bursaries (remaining items)
+internships.slice(70).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
     card.innerHTML = `
         <h3>${item.title}</h3>
-        <p class="company">${item.company}</p>
-        <p class="field">${item.field}</p>
+        <p class="company"><strong>Company:</strong> ${item.company}</p>
+        <p class="field"><strong>Field:</strong> ${item.field}</p>
         <a href="${item.link}" target="_blank" class="apply-btn">View & Apply</a>
     `;
     grid.appendChild(card);
-
-    if ((index + 1) % 3 === 0) {
-        const ad = document.createElement("div");
-        ad.id = "ezoic-pub-ad-placeholder-111";
-        ad.style.margin = "30px 0";
-        grid.appendChild(ad);
-    }
 });
