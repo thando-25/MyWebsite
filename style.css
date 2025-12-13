@@ -20,7 +20,7 @@ body {
 /* Hero Banner */
 .hero-banner {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 0; /* Removed extra margin to bring nav closer */
     height: 380px;
     overflow: hidden;
     border-radius: 0 0 20px 20px;
@@ -55,7 +55,7 @@ body {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Top Header */
+/* Top Header (kept but hidden if you want only sticky nav) */
 .top-header {
     background: linear-gradient(135deg, #006a4e, #007a5a);
     color: white;
@@ -73,11 +73,6 @@ body {
 }
 
 /* Search */
-.search-section {
-    margin: 40px auto;
-    text-align: center;
-}
-
 .search-section input {
     width: 100%;
     max-width: 700px;
@@ -93,7 +88,7 @@ body {
     box-shadow: 0 0 0 4px rgba(0, 106, 78, 0.1);
 }
 
-/* Internship Cards (Clean & Consistent) */
+/* Internship Cards */
 .internships-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -147,37 +142,49 @@ body {
     background: #004d39;
 }
 
-/* Original Content Guides & Tips (New) */
-.guides article,
-.guide-card {
+/* Guides Articles */
+article {
     background: white;
     padding: 30px;
-    margin: 30px 0;
+    margin-bottom: 30px;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-.guides h3,
-.guide-card h3 {
+article h3 {
     color: #006a4e;
-    margin-bottom: 15px;
     font-size: 1.6rem;
+    margin-bottom: 15px;
 }
 
-.guides p,
-.guide-card p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #444;
+/* Main Content - Side by Side */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 60px auto;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
-/* Original Tips/Commentary in Listings */
-.internships-grid > div[style*="background:#f0f8ff"],
-.internships-grid > div[style*="background:#fff3e0"] {
-    grid-column: 1 / -1;
-    text-align: center;
-    font-style: italic;
-    color: #006a4e;
+.guides-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.listings-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Sticky Navigation - Always on Top */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #00d4aa;
 }
 
 /* WhatsApp Float */
@@ -214,20 +221,11 @@ footer a {
 }
 
 /* Professional Navigation */
-.main-nav {
-    background: #ffffff;
-    padding: 18px 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 3px solid #006a4e;
-}
-
 .main-nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 0;
 }
 
 .nav-logo {
@@ -235,7 +233,6 @@ footer a {
     font-weight: 800;
     color: #006a4e;
     text-decoration: none;
-    letter-spacing: 0.5px;
 }
 
 .nav-links a {
@@ -279,16 +276,8 @@ footer a {
         font-size: 2.2rem;
     }
 
-    .hero-overlay p {
-        font-size: 1.1rem;
-    }
-
-    .logo-title h1 {
-        font-size: 2.2rem;
-    }
-
-    .internships-grid {
-        grid-template-columns: 1fr;
+    .main-content {
+        flex-direction: column;
     }
 
     .main-nav .container {
@@ -307,15 +296,8 @@ footer a {
         margin: 0;
         font-size: 1.15rem;
     }
-}
 
-
-/* Sticky Navigation - Always at Top */
-.sticky-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-bottom: 3px solid #00d4aa;
+    .internships-grid {
+        grid-template-columns: 1fr;
+    }
 }
