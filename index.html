@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 Internships & Graduate Programmes South Africa</title>
-    <meta name="description" content="Latest 2026 internships, graduate programmes, bursaries and YES opportunities in South Africa. Free guides and verified listings.">
+    <meta name="description"
+        content="Latest 2026 internships, graduate programmes, bursaries and YES opportunities in South Africa. Apply now!">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- Hero Banner -->
     <div class="hero-banner">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80&fit=crop" alt="2026 Internships South Africa">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80&fit=crop"
+            alt="2026 Internships South Africa">
         <div class="hero-overlay">
             <h1>Launch Your Career in 2026</h1>
             <p>Latest graduate programmes, internships & bursaries in South Africa</p>
         </div>
     </div>
-
-    <!-- Sticky Navigation - Visible Immediately -->
-    <nav class="main-nav sticky-nav">
+    <!-- Intro text -->
+    <div class="intro-text container" style="text-align:center; margin:40px auto; max-width:900px; font-size:1.1rem; line-height:1.8;">
+        <p>Welcome to <strong>2026 Internships SA</strong> – your free one-stop platform for the latest graduate programmes, internships, bursaries, and YES opportunities in South Africa. We update daily so you never miss a deadline.</p>
+    </div>
+    <!-- Header & Navigation -->
+    <header class="top-header">
+        <div class="container">
+            <div class="logo-title">
+                <h1>2026 Internships SA</h1>
+                <p>Graduate Programmes • Bursaries • YES • Learnerships</p>
+            </div>
+        </div>
+    </header>
+    <nav class="main-nav">
         <div class="container">
             <a href="index.html" class="nav-logo"><strong>2026 Internships SA</strong></a>
             <div class="nav-links">
@@ -32,57 +44,20 @@
             </div>
         </div>
     </nav>
-
-    <!-- Intro -->
-    <div class="intro-text container" style="text-align:center;margin:40px auto;max-width:900px;font-size:1.1rem;line-height:1.8;">
-        <p>Welcome to <strong>2026 Internships SA</strong> – your free, daily-updated platform for graduate programmes, internships, bursaries, and YES opportunities in South Africa. Explore our guides and listings below.</p>
-    </div>
-
-    <!-- Career Guides -->
-    <section class="guides container" style="max-width:900px;margin:60px auto;">
-        <h2 style="text-align:center;color:#00d4aa;margin-bottom:40px;font-size:2rem;">Free Career Guides & Tips</h2>
-
-        <article style="background:white;padding:30px;margin:30px 0;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.1);">
-            <h3>How to Apply for 2026 Graduate Programmes</h3>
-            <p>The 2026 season is open! Most companies open applications between June and September. Tailor your CV, prepare for assessments, and apply early. Research company culture and connect with alumni on LinkedIn.</p>
-            <a href="javascript:void(0)" onclick="document.getElementById('internships-section').scrollIntoView({behavior: 'smooth'});" style="color:#00d4aa;font-weight:bold;">See 2026 Programmes →</a>
-        </article>
-
-        <article style="background:white;padding:30px;margin:30px 0;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.1);">
-            <h3>Top Bursaries for 2026 (Fully Funded)</h3>
-            <p>NSFAS, Funza Lushaka, Sasol, Exxaro, and ISFAP offer full funding. Apply before August deadlines. Prepare your ID, results, and motivation letter.</p>
-            <a href="javascript:void(0)" onclick="document.getElementById('bursaries-section').scrollIntoView({behavior: 'smooth'});" style="color:#00d4aa;font-weight:bold;">Explore Bursaries →</a>
-        </article>
-
-        <article style="background:white;padding:30px;margin:30px 0;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.1);">
-            <h3>How to Write a Winning CV with No Experience</h3>
-            <p>Highlight education, projects, volunteer work, and skills. Use bullet points, keep it 1 page. Customize for each application.</p>
-        </article>
-
-        <article style="background:white;padding:30px;margin:30px 0;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.1);">
-            <h3>Common Interview Questions & Answers</h3>
-            <p>Prepare for "Tell me about yourself", "Why this company?", and strengths/weaknesses. Use STAR method. Practice recording yourself!</p>
-        </article>
-
-        <article style="background:white;padding:30px;margin:30px 0;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.1);">
-            <h3>YES Programme 2026 Guide</h3>
-            <p>The Youth Employment Service offers 12-month paid placements for ages 18–35. Apply via yes4youth.co.za. Many get permanent jobs after.</p>
-        </article>
-    </section>
-
     <!-- Search Bar -->
     <div class="search-section container">
-        <input type="text" id="searchInput" placeholder="Search company or field... (e.g. Nedbank, Finance, Engineering)">
+        <input type="text" id="searchInput"
+            placeholder="Search company or field... (e.g. Nedbank, Finance, Engineering)">
     </div>
-
-    <!-- Listings Grid -->
+    <!-- Internships Grid -->
     <main class="container">
-        <div id="internshipsGrid"></div>
+        <div class="internships-grid" id="internshipsGrid">
+            <!-- Filled by JavaScript -->
+        </div>
     </main>
-
-    <!-- WhatsApp Share -->
-    <a href="https://wa.me/?text=Check%20these%202026%20Internships%3A%20https://internshiphub.co.za" target="_blank" class="whatsapp-float">Share</a>
-
+    <!-- WhatsApp Share Button -->
+    <a href="https://wa.me/?text=Check%20these%202026%20Internships%3A%20https://internshiphub.co.za" target="_blank"
+        class="whatsapp-float">Share</a>
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -90,7 +65,6 @@
             <p><a href="privacy.html">Privacy Policy</a> • <a href="contact.html">Contact</a></p>
         </div>
     </footer>
-
     <script src="internships.js"></script>
     <script src="script.js"></script>
 </body>
