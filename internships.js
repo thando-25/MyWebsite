@@ -1,3 +1,4 @@
+
 const internships = [
     // === INTERNSHIPS & GRADUATE PROGRAMMES 2026 ===
     { title: "Bidvest International Logistics (BIL): YES Programme 2026", company: "Bidvest International Logistics", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13237" },
@@ -81,20 +82,21 @@ const internships = [
     { title: "ADSA: Bursary 2026", company: "Association for Dietetics SA", field: "Dietetics • Health", link: "https://bursaries-southafrica.co.za/adsa-bursary-2026" }
 ];
 
-// === RENDER WITH CLEAN HEADINGS AND ANCHORS ===
+// Render with IDs for smooth scroll
 const grid = document.getElementById("internshipsGrid");
 
-// Internships Heading with ID for anchor link
+// Internships Section
 grid.innerHTML += `
-<h2 id="internships" style="background:#00d4aa;color:white;padding:20px;border-radius:12px;margin:40px 0 25px;text-align:center;font-size:2.2rem;">
-    Internships & Graduate Programmes 2026
-</h2>
-<p style="text-align:center;margin-bottom:30px;color:#555;">
-    Over 70 verified 2026 opportunities from top companies. Apply early for the best chance!
-</p>
+<div id="internships-section">
+    <h2 style="background:#00d4aa;color:white;padding:20px;border-radius:12px;margin:40px 0 25px;text-align:center;font-size:2.2rem;">
+        Internships & Graduate Programmes 2026
+    </h2>
+    <p style="text-align:center;margin-bottom:30px;color:#555;">
+        Over 70 verified 2026 opportunities. Apply early for the best chance!
+    </p>
+</div>
 `;
 
-// Render Internships
 internships.slice(0, 70).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
@@ -107,17 +109,18 @@ internships.slice(0, 70).forEach(item => {
     grid.appendChild(card);
 });
 
-// Bursaries Heading with ID for anchor link
+// Bursaries Section
 grid.innerHTML += `
-<h2 id="bursaries" style="background:#ff6b35;color:white;padding:20px;border-radius:12px;margin:60px 0 25px;text-align:center;font-size:2.2rem;">
-    Bursaries & Scholarships 2026
-</h2>
-<p style="text-align:center;margin-bottom:30px;color:#555;">
-    20+ funded options for tuition and living costs. Many close in August — prepare your motivation letter now.
-</p>
+<div id="bursaries-section">
+    <h2 style="background:#ff6b35;color:white;padding:20px;border-radius:12px;margin:60px 0 25px;text-align:center;font-size:2.2rem;">
+        Bursaries & Scholarships 2026
+    </h2>
+    <p style="text-align:center;margin-bottom:30px;color:#555;">
+        20+ funded options for tuition and living costs.
+    </p>
+</div>
 `;
 
-// Render Bursaries
 internships.slice(70).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
