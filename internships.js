@@ -1,4 +1,5 @@
 
+
 const internships = [
     // === INTERNSHIPS & GRADUATE PROGRAMMES 2026 ===
     { title: "Bidvest International Logistics (BIL): YES Programme 2026", company: "Bidvest International Logistics", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13237" },
@@ -58,7 +59,6 @@ const internships = [
     { title: "Aluko & Oyebode: NYSC Associate Programme 2026", company: "Aluko & Oyebode", field: "Legal • Law", link: "https://www.opportunitiesforafricans.com/aluko-oyebode-nysc-associate-2026" },
     { title: "Telekom: Elevate Graduate Internship 2026", company: "Telekom", field: "Telecom • Technology", link: "https://www.opportunitiesforafricans.com/telekom-elevate-graduate-2026" },
     { title: "Transcorp: Young Engineer Development Programme 2026", company: "Transcorp", field: "Engineering • Power", link: "https://www.opportunitiesforafricans.com/transcorp-young-engineer-2026" },
-
     // === BURSARIES & SCHOLARSHIPS 2026 ===
     { title: "Free State Office of the Premier: Bursaries 2026", company: "Free State Office of the Premier", field: "Various Fields • Government", link: "https://www.graduates24.com/bursaries/free-state-premier-bursaries-2026" },
     { title: "Vulamathuba Empumelelo: Bursaries 2026", company: "Vulamathuba Empumelelo", field: "Community Development • Education", link: "https://www.graduates24.com/bursaries/vulamathuba-empumelelo-bursaries-2026" },
@@ -81,22 +81,13 @@ const internships = [
     { title: "ISFAP: Bursaries 2026", company: "Ikusasa Student Financial Aid Programme", field: "Full Funding • Missing Middle", link: "https://youthopportunitieshub.com/isfap-bursaries-2026" },
     { title: "ADSA: Bursary 2026", company: "Association for Dietetics SA", field: "Dietetics • Health", link: "https://bursaries-southafrica.co.za/adsa-bursary-2026" }
 ];
-
-// Render with IDs for smooth scroll
+// === RENDER WITH CLEAN HEADINGS – NO EZOIC ADS AT ALL ===
 const grid = document.getElementById("internshipsGrid");
-
-// Internships Section
-grid.innerHTML += `
-<div id="internships-section">
-    <h2 style="background:#00d4aa;color:white;padding:20px;border-radius:12px;margin:40px 0 25px;text-align:center;font-size:2.2rem;">
-        Internships & Graduate Programmes 2026
-    </h2>
-    <p style="text-align:center;margin-bottom:30px;color:#555;">
-        Over 70 verified 2026 opportunities. Apply early for the best chance!
-    </p>
-</div>
-`;
-
+// Internships Heading
+grid.innerHTML += `<h2 style="background:#00d4aa;color:white;padding:20px;border-radius:12px;margin:40px 0 25px;text-align:center;font-size:2.2rem;">
+    Internships & Graduate Programmes 2026
+</h2>`;
+// Render Internships
 internships.slice(0, 70).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
@@ -108,19 +99,11 @@ internships.slice(0, 70).forEach(item => {
     `;
     grid.appendChild(card);
 });
-
-// Bursaries Section
-grid.innerHTML += `
-<div id="bursaries-section">
-    <h2 style="background:#ff6b35;color:white;padding:20px;border-radius:12px;margin:60px 0 25px;text-align:center;font-size:2.2rem;">
-        Bursaries & Scholarships 2026
-    </h2>
-    <p style="text-align:center;margin-bottom:30px;color:#555;">
-        20+ funded options for tuition and living costs.
-    </p>
-</div>
-`;
-
+// Bursaries Heading
+grid.innerHTML += `<h2 style="background:#ff6b35;color:white;padding:20px;border-radius:12px;margin:60px 0 25px;text-align:center;font-size:2.2rem;">
+    Bursaries & Scholarships 2026
+</h2>`;
+// Render Bursaries
 internships.slice(70).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
