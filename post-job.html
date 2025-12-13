@@ -1,61 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Post Your Internship • www.InternshipHub.co.za</title>
-  <style>
-    body {font-family:Arial,sans-serif;background:#f8f9fa;text-align:center;padding:40px;margin:0;}
-    .container {max-width:900px;margin:40px auto;background:white;padding:50px;border-radius:15px;box-shadow:0 10px 40px rgba(0,0,0,0.1);}
-    h1 {color:#00d4aa;font-size:2.5rem;margin-bottom:10px;}
-    .price {font-size:3.5rem;color:#00d4aa;font-weight:bold;margin:10px 0;}
-    .popular {border:4px solid #00d4aa;background:#f0fffa;transform:scale(1.04);}
-    .card {display:inline-block;margin:30px;padding:40px;vertical-align:top;width:380px;}
-    .note {margin-top:60px;font-size:1.2rem;color:#444;}
-    img {max-width:100%;height:auto;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Your 2026 Opportunity • InternshipHub.co.za</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pricing-card {background:white;padding:40px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.1);text-align:center;margin:20px;}
+        .popular {border:4px solid #00d4aa;background:#f0fffa;}
+        .price {font-size:3rem;color:#00d4aa;font-weight:bold;}
+        .btn-img {max-width:280px;margin:20px auto;}
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Post Your 2026 Internship or Graduate Programme</h1>
-    <p style="font-size:1.4rem;margin-bottom:40px;">Reach thousands of students instantly</p>
 
-    <!-- FEATURED R1,950 -->
-    <div class="card popular">
-      <h2>Featured Listing</h2>
-      <div class="price">R1,950</div>
-      <p>Top of homepage for 30 days<br>Bold + highlighted<br>Shared to WhatsApp groups</p>
-      <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
-        <input required type="hidden" name="cmd" value="_paynow">
-        <input required type="hidden" name="receiver" value="26342223">
-        <input type="hidden" name="return_url" value="https://www.internshiphub.co.za/thanks">
-        <input required type="hidden" name="amount" value="1950">
-        <input required type="hidden" name="item_name" value="Featured Internship Listing">
-        <input type="hidden" name="item_description" value="Top placement on www.InternshipHub.co.za for 30 days + WhatsApp promotion">
-        <input type="image" src="https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png" alt="Pay R1,950 Now">
-      </form>
+    <!-- Header & Nav -->
+    <header class="top-header">
+        <div class="container">
+            <div class="logo-title">
+                <h1>2026 Internships SA</h1>
+                <p>Graduate Programmes • Bursaries • YES • Learnerships</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo"><strong>2026 Internships SA</strong></a>
+            <div class="nav-links">
+                <a href="index.html"><strong>Home</strong></a>
+                <a href="post-job.html"><strong>Post a Job</strong></a>
+                <a href="about.html"><strong>About</strong></a>
+                <a href="contact.html"><strong>Contact</strong></a>
+                <a href="privacy.html"><strong>Privacy Policy</strong></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Job Content -->
+    <div class="container" style="max-width:1100px;margin:80px auto;">
+        <h2 style="text-align:center;color:#00d4aa;font-size:2.5rem;margin-bottom:20px;">Feature Your 2026 Opportunity</h2>
+        <p style="text-align:center;font-size:1.3rem;color:#444;max-width:800px;margin:0 auto 60px;">
+            Reach thousands of students and graduates looking for internships, graduate programmes, and bursaries.
+        </p>
+
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;">
+
+            <!-- Featured -->
+            <div class="pricing-card popular">
+                <h3>Featured Listing</h3>
+                <div class="price">R1,950</div>
+                <ul style="text-align:left;max-width:300px;margin:20px auto;line-height:1.8;">
+                    <li>Top of homepage for 30 days</li>
+                    <li>Bold + highlighted card</li>
+                    <li>Shared to student WhatsApp groups</li>
+                    <li>Priority support</li>
+                </ul>
+                <!-- Your R1,950 PayFast form here -->
+                <form action="https://payment.payfast.io/eng/process" method="post">
+                    <input type="hidden" name="cmd" value="_paynow">
+                    <input type="hidden" name="receiver" value="26342223">
+                    <input type="hidden" name="return_url" value="https://internshiphub.co.za/thanks">
+                    <input type="hidden" name="amount" value="1950">
+                    <input type="hidden" name="item_name" value="Featured Internship Listing">
+                    <div class="btn-img">
+                        <input type="image" src="https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png" alt="Pay R1,950">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Standard -->
+            <div class="pricing-card">
+                <h3>Standard Listing</h3>
+                <div class="price">R950</div>
+                <ul style="text-align:left;max-width:300px;margin:20px auto;line-height:1.8;">
+                    <li>30 days on homepage</li>
+                    <li>Standard card display</li>
+                    <li>Fast listing</li>
+                </ul>
+                <!-- Your R950 PayFast form here -->
+                <form action="https://payment.payfast.io/eng/process" method="post">
+                    <input type="hidden" name="cmd" value="_paynow">
+                    <input type="hidden" name="receiver" value="26342223">
+                    <input type="hidden" name="return_url" value="https://internshiphub.co.za/thanks">
+                    <input type="hidden" name="amount" value="950">
+                    <input type="hidden" name="item_name" value="Standard Internship Listing">
+                    <div class="btn-img">
+                        <input type="image" src="https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png" alt="Pay R950">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <p style="text-align:center;margin-top:60px;font-size:1.1rem;color:#666;">
+            After payment, you’ll be redirected to submit your listing details. Questions? <a href="contact.html">Contact us</a>
+        </p>
     </div>
 
-    <!-- STANDARD R950 -->
-    <div class="card">
-      <h2>Standard Listing</h2>
-      <div class="price">R950</div>
-      <p>30-day listing on the homepage</p>
-      <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
-        <input required type="hidden" name="cmd" value="_paynow">
-        <input required type="hidden" name="receiver" value="26342223">
-        <input type="hidden" name="return_url" value="https://www.internshiphub.co.za/thanks">
-        <input required type="hidden" name="amount" value="950">
-        <input required type="hidden" name="item_name" value="Standard Internship Listing">
-        <input type="hidden" name="item_description" value="30-day listing on www.InternshipHub.co.za">
-        <input type="image" src="https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png" alt="Pay R950 Now">
-      </form>
-    </div>
+    <footer>
+        <div class="container">
+            <p>© 2026 Internships SA • Helping South African graduates launch their careers</p>
+        </div>
+    </footer>
 
-    <p class="note">
-      After payment you’ll be taken to a form to submit your listing instantly.<br>
-      Questions? WhatsApp us: <a href="https://wa.me/27XXXXXXXXX">Click here</a>
-    </p>
-  </div>
 </body>
 </html>
