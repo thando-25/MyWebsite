@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,37 +18,42 @@
             border-bottom: 3px solid #00d4aa;
         }
 
-        /* 50/50 Split Layout */
-        .split-layout {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin: 60px auto;
-            max-width: 1200px;
-            padding: 0 20px;
-        }
-
-        .guides-left {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .listings-right {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        .ad-middle {
+        /* Eye-Catching Scroll Notification Banner */
+        .scroll-notification {
+            background: linear-gradient(135deg, #00d4aa, #009f7f);
+            color: white;
             text-align: center;
-            margin: 60px 0;
+            padding: 18px 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            animation: pulse 2s infinite alternate;
+            box-shadow: 0 4px 15px rgba(0,212,170,0.3);
+        }
+
+        .scroll-notification span {
+            display: block;
+            font-size: 2.5rem;
+            margin-top: 10px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 4px 15px rgba(0,212,170,0.3); }
+            100% { box-shadow: 0 8px 25px rgba(0,212,170,0.5); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
         }
 
         @media (max-width: 768px) {
-            .split-layout {
-                flex-direction: column;
+            .scroll-notification {
+                font-size: 1.3rem;
+                padding: 15px 15px;
+            }
+            .scroll-notification span {
+                font-size: 2rem;
             }
         }
     </style>
@@ -62,6 +67,12 @@
             <h1>Launch Your Career in 2026</h1>
             <p>Latest graduate programmes, internships & bursaries in South Africa</p>
         </div>
+    </div>
+
+    <!-- Eye-Catching Scroll Down Notification - Right After Hero -->
+    <div class="scroll-notification">
+        👇 Scroll down to explore 2026 Internships, Graduate Programmes & Bursaries! 👇
+        <span>↓ ↓ ↓</span>
     </div>
 
     <!-- Sticky Navigation -->
@@ -104,12 +115,6 @@
                 <p>Highlight education, projects, volunteer work, and skills. Use bullet points, keep it 1 page. Customize for each application.</p>
             </article>
 
-            <!-- Native Banner in Middle of Guides -->
-            <div class="ad-middle">
-                <script async="async" data-cfasync="false" src="https://pl28253029.effectivegatecpm.com/1e6c623f4601f9f684c7068ed2b5e1a1/invoke.js"></script>
-                <div id="container-1e6c623f4601f9f684c7068ed2b5e1a1"></div>
-            </div>
-
             <article style="background:white;padding:30px;margin-bottom:30px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.1);">
                 <h3>Common Interview Questions & Answers</h3>
                 <p>Prepare for "Tell me about yourself", "Why this company?", and strengths/weaknesses. Use STAR method. Practice recording yourself!</p>
@@ -128,7 +133,11 @@
                 <input type="text" id="searchInput" placeholder="Search company or field... (e.g. Nedbank, Finance, Engineering)">
             </div>
 
-            <!-- 300x250 Display Banner - Middle Position -->
+            <!-- Adsterra Ads (Middle Visibility) -->
+            <div class="ad-middle">
+                <script type="text/javascript" src="https://pl28253317.effectivegatecpm.com/83/ef/2c/83ef2c56082f0f4b48ee58b48cb8956e.js"></script>
+            </div>
+
             <div class="ad-middle">
                 <script type="text/javascript">
                   atOptions = {
@@ -142,9 +151,9 @@
                 <script type="text/javascript" src="https://www.highperformanceformat.com/d7236f936531cd338ff94040d70d7728/invoke.js"></script>
             </div>
 
-            <!-- Script Ad - Middle Position -->
             <div class="ad-middle">
-                <script type="text/javascript" src="https://pl28253317.effectivegatecpm.com/83/ef/2c/83ef2c56082f0f4b48ee58b48cb8956e.js"></script>
+                <script async="async" data-cfasync="false" src="https://pl28253029.effectivegatecpm.com/1e6c623f4601f9f684c7068ed2b5e1a1/invoke.js"></script>
+                <div id="container-1e6c623f4601f9f684c7068ed2b5e1a1"></div>
             </div>
 
             <!-- Listings Grid -->
