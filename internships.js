@@ -58,17 +58,23 @@ const internships = [
     { title: "Aluko & Oyebode: NYSC Associate Programme 2026", company: "Aluko & Oyebode", field: "Legal • Law", link: "https://www.opportunitiesforafricans.com/aluko-oyebode-nysc-associate-2026" },
     { title: "Telekom: Elevate Graduate Internship 2026", company: "Telekom", field: "Telecom • Technology", link: "https://www.opportunitiesforafricans.com/telekom-elevate-graduate-2026" },
     { title: "Transcorp: Young Engineer Development Programme 2026", company: "Transcorp", field: "Engineering • Power", link: "https://www.opportunitiesforafricans.com/transcorp-young-engineer-2026" },
-    // Your New Verified Additions (Internships/Graduate)
-    { title: "Mercedes-Benz: Graduate Internships 2026", company: "Mercedes-Benz", field: "Automotive • Engineering • Business", link: "https://www.graduates24.com/jobs/viewjob/13341" },
-    { title: "Visa: Internship Opportunities 2026", company: "Visa", field: "Finance • Technology • Business", link: "https://www.graduates24.com/jobs/viewjob/13061" },
-    { title: "Msinsi Holdings: Internships (Finance, Accounting, Supply Chain, SHEQ Graduates)", company: "Msinsi Holdings", field: "Finance • Accounting • Supply Chain • SHEQ", link: "https://www.graduates24.com/jobs/viewjob/13403" },
-    { title: "SACAA: Contact Centre Trainee Programme 2026", company: "SACAA", field: "Aviation • Customer Service", link: "https://www.graduates24.com/jobs/viewjob/13400" },
-    { title: "Safety SA: Human Resource Internships 2026", company: "Safety SA", field: "Human Resources", link: "https://www.graduates24.com/jobs/viewjob/13402" },
-    { title: "Allan Gray: Graduate Opportunities (Investment Service Consultant)", company: "Allan Gray", field: "Finance • Investment", link: "https://www.graduates24.com/jobs/viewjob/13096" },
-    { title: "CSIR: Finance Asset Office Internships (Accounting or Finance Graduates)", company: "CSIR", field: "Finance • Accounting", link: "https://www.graduates24.com/jobs/viewjob/13401" },
-    { title: "Department of Tourism: Internships 2026", company: "Department of Tourism", field: "Tourism • Administration", link: "https://www.graduates24.com/jobs/viewjob/13297" },
-    { title: "Services SETA: Internships 2026", company: "Services SETA", field: "Various Fields • Administration", link: "https://www.graduates24.com/jobs/viewjob/13405" },
-    { title: "Opportunities for people with Grade 12", company: "Various Companies", field: "Entry-Level • No Degree Required", link: "https://www.graduates24.com/grade12_jobs" },
+
+    // === NEW ADDITIONS - January 2026 ===
+    { title: "SASSETA: Bursaries 2026", company: "SASSETA", field: "Various Fields • Safety & Security", link: "https://www.graduates24.com/jobs/viewjob/13417" },
+    { title: "CTU Training Solutions: IT Learnerships 2026", company: "CTU Training Solutions", field: "Information Technology • Learnership", link: "https://www.graduates24.com/jobs/viewjob/13416" },
+    { title: "Grain SA: Science Communication & Advocacy Internships 2026", company: "Grain SA", field: "Agricultural Sciences • Environmental Science • Food Science", link: "https://www.graduates24.com/jobs/viewjob/13425" },
+    { title: "Oracle: Business Operations Internship 2026 / 2027", company: "Oracle", field: "Business • Operations", link: "https://www.graduates24.com/jobs/viewjob/13464" },
+    { title: "Nedbank: CA Training Programme 2026 / 2027", company: "Nedbank", field: "Chartered Accounting • Finance", link: "https://www.graduates24.com/jobs/viewjob/13466" },
+    { title: "Coface South Africa: Marketing / Communications Internships 2026", company: "Coface South Africa", field: "Marketing • Communications", link: "https://www.graduates24.com/jobs/viewjob/13419" },
+    { title: "Coface: Commercial/Business Internships 2026", company: "Coface", field: "Business • Finance • Economics", link: "https://www.graduates24.com/jobs/viewjob/13418" },
+    { title: "Agrimark: Trade & Services Graduate Internships 2026", company: "Agrimark", field: "Trade • Services", link: "https://www.graduates24.com/jobs/viewjob/13468" },
+    { title: "Hyundai: Sales Trainee Programme 2026", company: "Hyundai", field: "Sales • Automotive", link: "https://www.graduates24.com/jobs/viewjob/13467" },
+    { title: "Momentum: Support Administrator Internships 2026", company: "Momentum", field: "Administration • Support", link: "https://www.graduates24.com/jobs/viewjob/13465" },
+    { title: "Takealot: Graduate Internships 2026", company: "Takealot", field: "E-commerce • Various", link: "https://www.graduates24.com/jobs/viewjob/13443" },
+
+    // === NEW VACANCIES (Entry-Level Jobs) ===
+    { title: "Hyundai SA Receptionist Vacancies", company: "Hyundai South Africa", field: "Administration • Customer Service", link: "https://www.board.org.za/hyundai-sa-receptionist-vacancies/" },
+    { title: "Virgin Active South Africa Service Ambassador", company: "Virgin Active South Africa", field: "Customer Service • Fitness", link: "https://www.board.org.za/virgin-active-south-africa-service-ambassador/" },
 
     // === BURSARIES & SCHOLARSHIPS 2026 ===
     { title: "Free State Office of the Premier: Bursaries 2026", company: "Free State Office of the Premier", field: "Various Fields • Government", link: "https://www.graduates24.com/bursaries/free-state-premier-bursaries-2026" },
@@ -91,7 +97,6 @@ const internships = [
     { title: "Vodacom: Bursary Programme 2026", company: "Vodacom", field: "Technology • Engineering", link: "https://www.vodacom.com/bursary-programme.php" },
     { title: "ISFAP: Bursaries 2026", company: "Ikusasa Student Financial Aid Programme", field: "Full Funding • Missing Middle", link: "https://youthopportunitieshub.com/isfap-bursaries-2026" },
     { title: "ADSA: Bursary 2026", company: "Association for Dietetics SA", field: "Dietetics • Health", link: "https://bursaries-southafrica.co.za/adsa-bursary-2026" },
-    // Your New Verified Additions (Bursaries/Learnerships)
     { title: "Discovery: Learnership Opportunities 2026", company: "Discovery", field: "Insurance • Health • Business", link: "https://www.graduates24.com/jobs/viewjob/12726" },
     { title: "Unilever: Learnership Opportunities 2026 (Closes 14 December 2025)", company: "Unilever", field: "FMCG • Manufacturing • Business", link: "https://www.graduates24.com/jobs/viewjob/13390" },
     { title: "WAAW Foundation: Bursaries 2026", company: "WAAW Foundation", field: "STEM • Women in Africa", link: "https://www.graduates24.com/jobs/viewjob/13406" },
@@ -100,7 +105,6 @@ const internships = [
 
 // Render with IDs for smooth scroll (no # in URL)
 const grid = document.getElementById("internshipsGrid");
-
 // Internships Section
 grid.innerHTML += `
 <div id="internships-section">
@@ -108,12 +112,11 @@ grid.innerHTML += `
         Internships & Graduate Programmes 2026
     </h2>
     <p style="text-align:center;margin-bottom:30px;color:#555;">
-        Over 70 verified 2026 opportunities. Apply early for the best chance!
+        Over 80 verified 2026 opportunities. Apply early for the best chance!
     </p>
 </div>
 `;
-
-internships.slice(0, 70).forEach(item => {
+internships.slice(0, 80).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
     card.innerHTML = `
@@ -124,7 +127,6 @@ internships.slice(0, 70).forEach(item => {
     `;
     grid.appendChild(card);
 });
-
 // Bursaries Section
 grid.innerHTML += `
 <div id="bursaries-section">
@@ -136,8 +138,7 @@ grid.innerHTML += `
     </p>
 </div>
 `;
-
-internships.slice(70).forEach(item => {
+internships.slice(80).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
     card.innerHTML = `
