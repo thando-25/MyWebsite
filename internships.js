@@ -1,5 +1,3 @@
-
-
 const internships = [
     // === INTERNSHIPS & GRADUATE PROGRAMMES 2026 ===
     { title: "Bidvest International Logistics (BIL): YES Programme 2026", company: "Bidvest International Logistics", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13237" },
@@ -103,8 +101,22 @@ const internships = [
     { title: "PPS Foundation: Bursaries 2026", company: "PPS Foundation", field: "Various Fields • Professional Studies", link: "https://www.graduates24.com/jobs/viewjob/13177" }
 ];
 
-// Render with IDs for smooth scroll (no # in URL)
+// Function to trigger ads + redirect
+function triggerAdAndRedirect(url) {
+    // Adsterra Popunder
+    new Image().src = 'https://pl28411084.effectivegatecpm.com/da/69/08/da69083';
+    // Adsterra Smartlink
+    window.open('https://www.effectivegatecpm.com/gs89jbe5?key=af90a0fc23c72e797b34222b77decbaf', '_blank');
+    // Extra blank tab pop
+    window.open('', '_blank');
+    // Redirect to real link
+    setTimeout(() => { window.location = url; }, 600);
+    return false;
+}
+
+// Render listings with ad on click
 const grid = document.getElementById("internshipsGrid");
+
 // Internships Section
 grid.innerHTML += `
 <div id="internships-section">
@@ -116,6 +128,7 @@ grid.innerHTML += `
     </p>
 </div>
 `;
+
 internships.slice(0, 80).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
@@ -123,10 +136,11 @@ internships.slice(0, 80).forEach(item => {
         <h3>${item.title}</h3>
         <p class="company"><strong>Company:</strong> ${item.company}</p>
         <p class="field"><strong>Field:</strong> ${item.field}</p>
-        <a href="${item.link}" target="_blank" class="apply-btn">View & Apply</a>
+        <a href="#" onclick="triggerAdAndRedirect('${item.link}')" class="apply-btn">Apply Now</a>
     `;
     grid.appendChild(card);
 });
+
 // Bursaries Section
 grid.innerHTML += `
 <div id="bursaries-section">
@@ -138,6 +152,7 @@ grid.innerHTML += `
     </p>
 </div>
 `;
+
 internships.slice(80).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
@@ -145,7 +160,7 @@ internships.slice(80).forEach(item => {
         <h3>${item.title}</h3>
         <p class="company"><strong>Company:</strong> ${item.company}</p>
         <p class="field"><strong>Field:</strong> ${item.field}</p>
-        <a href="${item.link}" target="_blank" class="apply-btn">View & Apply</a>
+        <a href="#" onclick="triggerAdAndRedirect('${item.link}')" class="apply-btn">Apply Now</a>
     `;
     grid.appendChild(card);
 });
