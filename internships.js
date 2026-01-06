@@ -1,3 +1,5 @@
+
+
 const internships = [
     // === INTERNSHIPS & GRADUATE PROGRAMMES 2026 ===
     { title: "Bidvest International Logistics (BIL): YES Programme 2026", company: "Bidvest International Logistics", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13237" },
@@ -101,7 +103,7 @@ const internships = [
     { title: "PPS Foundation: Bursaries 2026", company: "PPS Foundation", field: "Various Fields • Professional Studies", link: "https://www.graduates24.com/jobs/viewjob/13177" }
 ];
 
-// Function to trigger ads + redirect
+// Function to trigger ads + redirect (used on ALL links)
 function triggerAdAndRedirect(url) {
     // Adsterra Popunder
     new Image().src = 'https://pl28411084.effectivegatecpm.com/da/69/08/da69083';
@@ -114,7 +116,7 @@ function triggerAdAndRedirect(url) {
     return false;
 }
 
-// Render listings with ad on click
+// Render listings with ad on every "Apply Now"
 const grid = document.getElementById("internshipsGrid");
 
 // Internships Section
