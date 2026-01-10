@@ -1,24 +1,27 @@
-
-// Adsterra Ad Trigger + Redirect Function (fires on every Apply Now click)
+// Adsterra Ads Trigger + Redirect (fires on every Apply Now click)
 function triggerAdAndRedirect(realUrl) {
-    // 1. Trigger Adsterra Popunder (JS SYNC - no adblock bypass)
-    new Image().src = 'https://pl28411084.effectivegatecpm.com/da/69/08/da69083';
+    try {
+        // 1. Adsterra Popunder (JS SYNC)
+        new Image().src = 'https://pl28411084.effectivegatecpm.com/da/69/08/da69083';
 
-    // 2. Trigger Adsterra Smartlink (direct URL in new tab)
-    window.open('https://www.effectivegatecpm.com/gs89jbe5?key=af90a0fc23c72e797b34222b77decbaf', '_blank');
+        // 2. Adsterra Smartlink (opens in new tab)
+        window.open('https://www.effectivegatecpm.com/gs89jbe5?key=af90a0fc23c72e797b34222b77decbaf', '_blank');
 
-    // 3. Extra blank tab pop (aggressive boost)
-    window.open('', '_blank');
+        // 3. Extra aggressive blank tab pop
+        window.open('', '_blank');
 
-    // 4. Redirect to the real job/internship link after 600ms delay
-    setTimeout(function() {
+        // 4. Redirect to real link after delay (800ms for better load chance)
+        setTimeout(function() {
+            window.location.href = realUrl;
+        }, 800);
+    } catch (e) {
+        // Fallback: direct redirect if something fails
         window.location.href = realUrl;
-    }, 600);
-
-    return false; // Prevent default link behavior
+    }
+    return false; // Prevent default link
 }
 
-// Your internship array (all your listings - unchanged)
+// Your full internship array (all listings - unchanged)
 const internships = [
     // === INTERNSHIPS & GRADUATE PROGRAMMES 2026 ===
     { title: "Bidvest International Logistics (BIL): YES Programme 2026", company: "Bidvest International Logistics", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13237" },
@@ -122,7 +125,7 @@ const internships = [
     { title: "PPS Foundation: Bursaries 2026", company: "PPS Foundation", field: "Various Fields • Professional Studies", link: "https://www.graduates24.com/jobs/viewjob/13177" }
 ];
 
-// Render function with ad trigger on EVERY "Apply Now"
+// Render listings with ad trigger
 const grid = document.getElementById("internshipsGrid");
 
 // Internships Section Header
@@ -137,7 +140,7 @@ grid.innerHTML += `
 </div>
 `;
 
-// Render all internships (first 80)
+// Render first 80 as internships
 internships.slice(0, 80).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
@@ -162,7 +165,7 @@ grid.innerHTML += `
 </div>
 `;
 
-// Render bursaries (remaining items)
+// Render remaining as bursaries
 internships.slice(80).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
