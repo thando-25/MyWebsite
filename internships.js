@@ -1,5 +1,24 @@
 
+// Adsterra Ad Trigger + Redirect Function (fires on every Apply Now click)
+function triggerAdAndRedirect(realUrl) {
+    // 1. Trigger Adsterra Popunder (JS SYNC - no adblock bypass)
+    new Image().src = 'https://pl28411084.effectivegatecpm.com/da/69/08/da69083';
 
+    // 2. Trigger Adsterra Smartlink (direct URL in new tab)
+    window.open('https://www.effectivegatecpm.com/gs89jbe5?key=af90a0fc23c72e797b34222b77decbaf', '_blank');
+
+    // 3. Extra blank tab pop (aggressive boost)
+    window.open('', '_blank');
+
+    // 4. Redirect to the real job/internship link after 600ms delay
+    setTimeout(function() {
+        window.location.href = realUrl;
+    }, 600);
+
+    return false; // Prevent default link behavior
+}
+
+// Your internship array (all your listings - unchanged)
 const internships = [
     // === INTERNSHIPS & GRADUATE PROGRAMMES 2026 ===
     { title: "Bidvest International Logistics (BIL): YES Programme 2026", company: "Bidvest International Logistics", field: "Logistics • Supply Chain • Operations", link: "https://www.graduates24.com/jobs/viewjob/13237" },
@@ -103,23 +122,10 @@ const internships = [
     { title: "PPS Foundation: Bursaries 2026", company: "PPS Foundation", field: "Various Fields • Professional Studies", link: "https://www.graduates24.com/jobs/viewjob/13177" }
 ];
 
-// Function to trigger ads + redirect (used on ALL links)
-function triggerAdAndRedirect(url) {
-    // Adsterra Popunder
-    new Image().src = 'https://pl28411084.effectivegatecpm.com/da/69/08/da69083';
-    // Adsterra Smartlink
-    window.open('https://www.effectivegatecpm.com/gs89jbe5?key=af90a0fc23c72e797b34222b77decbaf', '_blank');
-    // Extra blank tab pop
-    window.open('', '_blank');
-    // Redirect to real link
-    setTimeout(() => { window.location = url; }, 600);
-    return false;
-}
-
-// Render listings with ad on every "Apply Now"
+// Render function with ad trigger on EVERY "Apply Now"
 const grid = document.getElementById("internshipsGrid");
 
-// Internships Section
+// Internships Section Header
 grid.innerHTML += `
 <div id="internships-section">
     <h2 style="background:#00d4aa;color:white;padding:20px;border-radius:12px;margin:40px 0 25px;text-align:center;font-size:2.2rem;">
@@ -131,6 +137,7 @@ grid.innerHTML += `
 </div>
 `;
 
+// Render all internships (first 80)
 internships.slice(0, 80).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
@@ -138,12 +145,12 @@ internships.slice(0, 80).forEach(item => {
         <h3>${item.title}</h3>
         <p class="company"><strong>Company:</strong> ${item.company}</p>
         <p class="field"><strong>Field:</strong> ${item.field}</p>
-        <a href="#" onclick="triggerAdAndRedirect('${item.link}')" class="apply-btn">Apply Now</a>
+        <a href="#" onclick="return triggerAdAndRedirect('${item.link}')" class="apply-btn">Apply Now</a>
     `;
     grid.appendChild(card);
 });
 
-// Bursaries Section
+// Bursaries Section Header
 grid.innerHTML += `
 <div id="bursaries-section">
     <h2 style="background:#ff6b35;color:white;padding:20px;border-radius:12px;margin:60px 0 25px;text-align:center;font-size:2.2rem;">
@@ -155,6 +162,7 @@ grid.innerHTML += `
 </div>
 `;
 
+// Render bursaries (remaining items)
 internships.slice(80).forEach(item => {
     const card = document.createElement("div");
     card.className = "internship-card";
@@ -162,7 +170,7 @@ internships.slice(80).forEach(item => {
         <h3>${item.title}</h3>
         <p class="company"><strong>Company:</strong> ${item.company}</p>
         <p class="field"><strong>Field:</strong> ${item.field}</p>
-        <a href="#" onclick="triggerAdAndRedirect('${item.link}')" class="apply-btn">Apply Now</a>
+        <a href="#" onclick="return triggerAdAndRedirect('${item.link}')" class="apply-btn">Apply Now</a>
     `;
     grid.appendChild(card);
 });
